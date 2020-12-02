@@ -1,1 +1,1 @@
-# thesys-project
+# thesis-project-tiny-pointnet
