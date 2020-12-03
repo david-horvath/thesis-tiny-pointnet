@@ -172,8 +172,8 @@ history = model.fit(train_dataset,
                     shuffle=True)
 
 # Save the model and model weights
-model.save(SAVED_MODELS_DIR + f'/TinyPointNet-{config.dataset}')
-model.save_weights(SAVED_WEIGHTS_DIR + f'/TinyPointNet-weights-final-{config.dataset}.hdf5')
+model.save(SAVED_MODELS_DIR + f'/Tiny-PointNet-{config.dataset}')
+model.save_weights(SAVED_WEIGHTS_DIR + f'/Tiny-PointNet-weights-final-{config.dataset}.hdf5')
 
 # Visualize loss, accuracy and mean IOU
 visualize_training(history)

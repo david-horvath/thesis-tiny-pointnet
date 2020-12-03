@@ -1,17 +1,41 @@
-# Thesis Project - Tiny PointNet
+# Thesis Project - Tiny-PointNet the Semantic Segmentation framework for point clouds
 
-## Tiny PointNet model
+## Tiny-PointNet model
 ![model][model]
+```
+Total params: 238,813
+Trainable params: 236,765
+Non-trainable params: 2,048
+
+Model size: ~5 MB
+Model weights size: ~3 MB
+```
 
 
-> ### **Important!**
+> ### Pretrained models and other assets
+> The ```assets/pretrained_models``` folder contains both trained models and their weights.
 >
+> The ```assets/TinyPointNet-<DATASET_NAME>``` folders contains (in compressed form) the training logs, the model weights of each epoch, Google Colab notebook and the saved model wich same as the ```assets/pretrained_models/tiny-pointnet-<DATASET_NAME>``` folders content.
+
+## Using Tiny-PointNet framework
+### Clone GitHub repository
+```
+$> git clone https://github.com/david-horvath/thesis-tiny-pointnet.git
+```
+
+### Install required libraries
+```
+$> cd thesis-tiny-pointnet
+$> pip install -r requirements.txt
+```
+
+### **Download datasets ( Important! )**
 > **First, please download the datasets using the links below and place them (zip files) in the ```datas``` folder.**
 > * Download [VKITTI3D Dataset](https://drive.google.com/file/d/1QFMaKL5znKwCQmpmlL8o8tHatleYfC-H/view?usp=sharing)
 > * Download [S3DIS Dataset](https://drive.google.com/file/d/1Mxqv-LJ976_R7YFzabws-ZOQ0yWQgctJ/view?usp=sharing)
 
 
-### Training on VKITTI3D dataset (accuracy: ~96%)
+### Train model on VKITTI3D dataset (accuracy: ~96%)
 ```
 $> python train.py --num_points 4096 \
                    --num_classes 13 \
@@ -22,9 +46,10 @@ $> python train.py --num_points 4096 \
                    --augment \
                    --eval
 ```
+#### Training accuracy and loss
 ![pointnet-training-VKITTI3D][pointnet-training-VKITTI3D]
 
-### Training on S3DIS dataset (accuracy: ~84%)
+### Train model on S3DIS dataset (accuracy: ~84%)
 ```
 $> python train.py --num_points 4096 \
                    --num_classes 13 \
@@ -35,6 +60,7 @@ $> python train.py --num_points 4096 \
                    --augment \
                    --eval
 ```
+#### Training accuracy and loss
 ![pointnet-training-S3DIS][pointnet-training-S3DIS]
 
 
@@ -42,18 +68,18 @@ $> python train.py --num_points 4096 \
 #### Predict point cloud from VKITTI3D dataset
 ```
 $> python prediction.py --num_points 4096 \
-                       --num_classes 13 \
-                       --weights ./assets/pretrained_models/tiny-pointnet-vkitti3d/saved_weights.hdf5 \
-                       --file ./datas/vkitti3d_dataset/vkitti3d_h5_v10001_00000.h5 \
-                       --output ./predictions
+                        --num_classes 13 \
+                        --weights ./assets/pretrained_models/tiny-pointnet-vkitti3d/saved_weights.hdf5 \
+                        --file ./datas/vkitti3d_dataset/vkitti3d_h5_v10001_00000.h5 \
+                        --output ./predictions
 ```
 #### Predict point cloud from S3DIS dataset
 ```
 $> python prediction.py --num_points 4096 \
-                       --num_classes 13 \
-                       --weights ./assets/pretrained_models/tiny-pointnet-s3dis/saved_weights.hdf5 \
-                       --file ./datas/s3dis_dataset/Area_1_conferenceRoom_1.h5 \
-                       --output ./predictions
+                        --num_classes 13 \
+                        --weights ./assets/pretrained_models/tiny-pointnet-s3dis/saved_weights.hdf5 \
+                        --file ./datas/s3dis_dataset/Area_1_conferenceRoom_1.h5 \
+                        --output ./predictions
 ```
 
 
