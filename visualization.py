@@ -55,7 +55,7 @@ for i in range(data.shape[0]):
     pred_colors[i, :] = [code / 255 for code in rgb_codes[int(np.argmax(preds[i]))]]
 
 
-canvas = vispy.scene.SceneCanvas(title='PointNet Visualization', keys='interactive', show=True, bgcolor='grey')
+canvas = vispy.scene.SceneCanvas(title='Tiny-PointNet Visualization', keys='interactive', show=True, bgcolor='grey')
 canvas.size = 1920, 1080
 canvas.show()
 
