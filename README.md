@@ -72,8 +72,8 @@ $> python visualization.py --file ./predictions/prediction_Area_1_conferenceRoom
 ![prediction-s3dis][prediction-s3dis]
 
 
-[model]: ./assets/model.png
-[pointnet-training-VKITTI3D]: assets/pointnet-training-VKITTI3D.png
-[pointnet-training-S3DIS]: ./assets/pointnet-training-S3DIS.png
-[prediction-vkitti3d]: ./assets/visu_vkitti3d.png
-[prediction-s3dis]: ./assets/visu_s3dis.png
+[model]: assets/readme/model.png
+[pointnet-training-VKITTI3D]: assets/readme/pointnet-training-VKITTI3D.png
+[pointnet-training-S3DIS]: assets/readme/pointnet-training-S3DIS.png
+[prediction-vkitti3d]: assets/readme/visu_vkitti3d.png
+[prediction-s3dis]: assets/readme/visu_s3dis.png
