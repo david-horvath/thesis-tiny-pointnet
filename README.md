@@ -11,11 +11,11 @@ Model size: ~5 MB
 Model weights size: ~3 MB
 ```
 
-
 > ### Pretrained models and other assets
 > The ```assets/pretrained_models``` folder contains both trained models and their weights.
 >
-> The ```assets/TinyPointNet-<DATASET_NAME>``` folders contains (in compressed form) the training logs, the model weights of each epoch, Google Colab notebook and the saved model wich same as the ```assets/pretrained_models/tiny-pointnet-<DATASET_NAME>``` folders content.
+> The ```assets/TinyPointNet-<DATASET_NAME>``` folders contains (in compressed form) the training logs, the model weights and the saved model wich same as the ```assets/pretrained_models/tiny-pointnet-<DATASET_NAME>``` folders content.
+
 
 ## Using Tiny-PointNet framework
 ### Clone GitHub repository
@@ -31,8 +31,8 @@ $> pip install -r requirements.txt
 
 ### **Download datasets ( Important! )**
 > **First, please download the datasets using the links below and place them (zip files) in the ```datas``` folder.**
-> * Download [VKITTI3D Dataset](https://drive.google.com/file/d/1QFMaKL5znKwCQmpmlL8o8tHatleYfC-H/view?usp=sharing)
-> * Download [S3DIS Dataset](https://drive.google.com/file/d/1Mxqv-LJ976_R7YFzabws-ZOQ0yWQgctJ/view?usp=sharing)
+* Download [VKITTI3D Dataset](https://drive.google.com/file/d/1QFMaKL5znKwCQmpmlL8o8tHatleYfC-H/view?usp=sharing)
+* Download [S3DIS Dataset](https://drive.google.com/file/d/1Mxqv-LJ976_R7YFzabws-ZOQ0yWQgctJ/view?usp=sharing)
 
 
 ### Train model on VKITTI3D dataset (accuracy: ~96%)
