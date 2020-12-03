@@ -12,9 +12,7 @@ Model weights size: ~3 MB
 ```
 
 > ### Pretrained models and other assets
-> The ```assets/pretrained_models``` folder contains both trained models and their weights.
->
-> The ```assets/TinyPointNet-<DATASET_NAME>``` folders contains (in compressed form) the training logs, the model weights and the saved model wich same as the ```assets/pretrained_models/tiny-pointnet-<DATASET_NAME>``` folders content.
+> The ```assets/pretrained_models``` folder contains both trained models and their weights and training logs in compressed form.
 
 
 ## Using Tiny-PointNet framework
