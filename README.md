@@ -1,11 +1,15 @@
 # Thesis Project - Tiny PointNet
 
-* Download [VKITTI3D Dataset](https://drive.google.com/file/d/1QFMaKL5znKwCQmpmlL8o8tHatleYfC-H/view?usp=sharing)
-* Download [S3DIS Dataset](https://drive.google.com/file/d/1Mxqv-LJ976_R7YFzabws-ZOQ0yWQgctJ/view?usp=sharing)
-
-
 ## Tiny PointNet model
 ![model][model]
+
+
+> ### **Important!**
+>
+> **First, please download the datasets using the links below and place them (zip files) in the ```datas``` folder.**
+> * Download [VKITTI3D Dataset](https://drive.google.com/file/d/1QFMaKL5znKwCQmpmlL8o8tHatleYfC-H/view?usp=sharing)
+> * Download [S3DIS Dataset](https://drive.google.com/file/d/1Mxqv-LJ976_R7YFzabws-ZOQ0yWQgctJ/view?usp=sharing)
+
 
 ### Training on VKITTI3D dataset (accuracy: ~96%)
 ```
@@ -33,6 +37,7 @@ $> python train.py --num_points 4096 \
 ```
 ![pointnet-training-S3DIS][pointnet-training-S3DIS]
 
+
 ### Predict point clouds
 #### Predict point cloud from VKITTI3D dataset
 ```
@@ -51,6 +56,7 @@ $> python prediction.py --num_points 4096 \
                        --output ./predictions
 ```
 
+
 ### Visualize predictions
 #### Visualize predicted point cloud (VKITTI3D)
 ```
@@ -64,6 +70,7 @@ $> python visualization.py --file ./predictions/prediction_Area_1_conferenceRoom
                            --semantic_classes s3dis
 ```
 ![prediction-s3dis][prediction-s3dis]
+
 
 [model]: ./assets/model.png
 [pointnet-training-VKITTI3D]: assets/pointnet-training-VKITTI3D.png
