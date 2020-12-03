@@ -86,9 +86,9 @@ real_scatter = visuals.Markers()
 mask_scatter = visuals.Markers()
 pred_scatter = visuals.Markers()
 
-real_scatter.set_data(data[:, :3], edge_color=None, face_color=real_colors, size=4)
-mask_scatter.set_data(data[:, :3], edge_color=None, face_color=mask_colors, size=4)
-pred_scatter.set_data(data[:, :3], edge_color=None, face_color=pred_colors, size=4)
+real_scatter.set_data(data[:, :3], edge_color=None, face_color=real_colors, size=5)
+mask_scatter.set_data(data[:, :3], edge_color=None, face_color=mask_colors, size=5)
+pred_scatter.set_data(data[:, :3], edge_color=None, face_color=pred_colors, size=5)
 
 vb1.add(real_scatter)
 vb2.add(mask_scatter)

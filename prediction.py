@@ -1,3 +1,4 @@
+import os
 import argparse
 import h5py
 
@@ -33,6 +34,10 @@ parser.add_argument('--output',
                     help='Path of prediction destination folder.')
 
 config = parser.parse_args()
+
+
+if not os.path.exists(config.output):
+    os.mkdir(config.output)
 
 
 model = get_model(num_points=config.num_points, num_classes=config.num_classes)
