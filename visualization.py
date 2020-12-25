@@ -28,16 +28,17 @@ npoints = data['normalized_points']
 ppoints = data['predicted_points']
 labels = data['labels']
 
-print(points.shape)
-print(npoints.shape)
-print(ppoints.shape)
-print(labels.shape)
+#print(points.shape)
+#print(npoints.shape)
+#print(ppoints.shape)
+#print(labels.shape)
 
-data = np.concatenate(npoints, axis=0)
+data = np.concatenate(points, axis=0)
+ndata = np.concatenate(npoints, axis=0)
 label = np.concatenate(labels, axis=0)
 preds = np.concatenate(ppoints, axis=0)
 
-print(data.shape, label.shape, preds.shape)
+#print(data.shape, label.shape, preds.shape)
 
 rgb_codes = [rgb_code for (_, rgb_code) in VKITTI3D_CLASSES]
 class_names = [class_name for (class_name, _) in VKITTI3D_CLASSES]
@@ -50,7 +51,7 @@ real_colors = np.zeros((label.shape[0], 3))
 mask_colors = np.zeros((label.shape[0], 3))
 pred_colors = np.zeros((label.shape[0], 3))
 for i in range(data.shape[0]):
-    real_colors[i, :] = [code for code in data[i, 3:6]]
+    real_colors[i, :] = [code for code in ndata[i, 3:6]]
     mask_colors[i, :] = [code / 255 for code in rgb_codes[int(label[i])]]
     pred_colors[i, :] = [code / 255 for code in rgb_codes[int(np.argmax(preds[i]))]]
 
@@ -80,6 +81,21 @@ grid.add_widget(title3, 0, 2)
 grid.add_widget(vb1, 1, 0)
 grid.add_widget(vb2, 1, 1)
 grid.add_widget(vb3, 1, 2)
+
+c_grid = vb4.add_grid()
+
+label = vispy.scene.Label('Classes:', color='white')
+label.height_max = 30
+
+c_grid.add_widget(label)
+
+for i in range(len(rgb_codes)):
+    vb = vispy.scene.widgets.ViewBox(bgcolor=[code / 255 for code in rgb_codes[i]], parent=vb4)
+    label = vispy.scene.Label(class_names[i], color='white')
+    label.height_max = 30
+    vb.add_widget(label)
+    c_grid.add_widget(vb)
+
 grid.add_widget(vb4, 2, 0, col_span=3)
 
 real_scatter = visuals.Markers()
