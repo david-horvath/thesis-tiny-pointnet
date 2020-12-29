@@ -84,7 +84,7 @@ grid = canvas.central_widget.add_grid()
 grid.padding = 6
 
 grid.add_widget(get_label('Real colors'), 0, 0)
-grid.add_widget(get_label('Ground thrith'), 0, 1)
+grid.add_widget(get_label('Ground thruth'), 0, 1)
 grid.add_widget(get_label('Prediction'), 0, 2)
 grid.add_widget(vb1, 1, 0)
 grid.add_widget(vb2, 1, 1)
