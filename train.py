@@ -152,7 +152,7 @@ reduce_lr = ReduceLROnPlateau(
 
 lr_scheduler = LearningRateScheduler(decay_schedule, verbose=1)
 
-tensorboard = TensorBoard(log_dir=SAVED_MODELS_DIR + f'/tiny-pointnet-{config.dataset}')
+tensorboard = TensorBoard(log_dir=LOGS_DIR + f'/tiny-pointnet-{config.dataset}')
 
 callbacks = [
     checkpoint,
