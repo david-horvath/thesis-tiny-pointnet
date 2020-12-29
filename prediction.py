@@ -16,10 +16,6 @@ parser.add_argument('--num_classes',
                     type=int,
                     default=13,
                     help='Number of segmentation classes.')
-parser.add_argument('--model',
-                    action='store',
-                    type=str,
-                    help='Path of pretrained model.')
 parser.add_argument('--weights',
                     action='store',
                     type=str,
@@ -67,3 +63,5 @@ pf.create_dataset('labels', data=labels, compression='gzip', dtype='int64')
 
 f.close()
 pf.close()
+
+print(f'Prediction done! Predicted point cloud saved on path {pred_filename}')
