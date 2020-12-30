@@ -41,8 +41,8 @@ $> python train.py --num_points 4096 \
                    --epochs 100 \
                    --lr 0.001 \
                    --dataset vkitti3d \
-                   --augment \
-                   --eval
+                   --augment True \
+                   --eval True
 ```
 #### Training accuracy and loss
 ![pointnet-training-VKITTI3D][pointnet-training-VKITTI3D]
