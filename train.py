@@ -114,10 +114,10 @@ if config.eval:
     test_dataset = tf.data.Dataset.from_tensor_slices((test_data, one_hot_test_label))
     test_dataset = test_dataset.repeat(4).shuffle(len(test_data)).batch(config.batch_size, drop_remainder=True)
 
-# Get Tiny PointNet model
+# Get Tiny-PointNet model
 model = get_model(num_points=config.num_points, num_classes=config.num_classes)
 
-# Summary the model
+# Display model architecture
 model.summary()
 
 # Compile the model
