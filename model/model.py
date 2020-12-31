@@ -30,6 +30,7 @@ def get_model(num_points, num_classes, bn_momentum=.99):
 
     # Embed to 256-dim space (B x N x 32 -> B x N x 256)
     embed_32_transform = tf.expand_dims(embed_32_transform_t, axis=2)
+
     hidden_32 = ConvLayer(32, 1, strides=1, activation=tf.nn.relu, apply_bn=True,
                           bn_momentum=bn_momentum)(embed_32_transform)
 
